@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>EDIT</h1>
+
+<div class="col-md-4 offset-md-4">
+
+    <div class="card card-body">
+
+        <form action = "/update2/{{autor.0}}", method="post">
+            <div class="form-group">
+                <!-- <label for="nombres">Nombres</label> -->
+                <input type="text" class="form-control" name="nombre" value="{{autor.1}}">
+                <small id="emailHelp" class="form-text text-muted">Nombre</small>
+            </div>
+            <div class="form-group">
+                <!-- <label for="telefono">Telefono</label> -->
+                <input type="text" class="form-control" name="edicion" value="{{autor.2}}">
+                <small id="emailHelp" class="form-text text-muted">Edicion</small>
+            </div>
+            <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" class="form-control" name="fecha" value="{{autor.3}}">
+                <small id="emailHelp" class="form-text text-muted">Fecha de Publicacion</small>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">Save</button>      
+            </div>
+
+            
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
